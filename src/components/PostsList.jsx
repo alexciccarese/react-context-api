@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import PostContext from "../contexts/PostContext";
-
-const api_url = 'http://localhost:3003'
+import PostCard from "./PostCard";
 
 export default function PostsList() {
   const { posts } = useContext(PostContext)
@@ -16,13 +15,7 @@ export default function PostsList() {
         {posts.map(post => (
           <div className="col" key={`post-${post.id}`}>
 
-            {/* add card here */}
-            <div className="card">
-              <img className="card-img-top" src={api_url + post.image} alt={post.title} />
-              <div className="card-body">
-                {post.title}
-              </div>
-            </div>
+            <PostCard post={post} />
 
           </div>
         ))}

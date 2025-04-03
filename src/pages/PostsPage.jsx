@@ -2,10 +2,6 @@ import { useContext } from "react";
 import PostContext from "../contexts/PostContext";
 import PostsList from "../components/PostsList";
 
-const api_url = 'http://localhost:3003'
-
-
-
 export default function PostsPage() {
 
   const { posts } = useContext(PostContext)
